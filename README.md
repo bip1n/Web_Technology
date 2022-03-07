@@ -1,1 +1,1 @@
-This codes are the lab assignment of our subject Web-Technology.
+These codes are the lab assignment of our subject Web-Technology.
