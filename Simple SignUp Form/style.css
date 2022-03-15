@@ -1,0 +1,17 @@
+.heading{
+    background-color: rgb(255, 145, 0);
+    color: white;
+}
+tr{
+    background-color: rgb(26, 31, 46);
+    color: azure;
+}
+.terms{
+    background-color:rgb(255, 145, 0);
+}
+.submit{
+    background-color: green;
+}
+.reset{
+    background-color: red;
+}
