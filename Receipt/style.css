@@ -1,0 +1,70 @@
+.buyer_name{
+    text-align: center;
+}
+
+.input_area {
+  padding-top: 20px;
+  height: 250px;
+  width: 500px;
+  background-color: gray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+}
+.button {
+  width: 80%;
+  margin: auto;
+  visibility: hidden;
+}
+p {
+  color: white;
+}
+.receipt_title{
+    color: rgb(255, 0, 0);
+}
+body{
+    margin-top: 90px;
+    font-family:Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+}
+
+.div{
+    align-items: center;
+    background-color:rgb(183, 207, 183);
+    margin-left: 20%;
+    margin-right: 20%;
+
+}
+#total_button{
+    background-color: rgb(108, 217, 217);
+    color: rgb(0, 0, 0);
+    padding-left: 100px;
+    padding-right: 100px;
+    border-radius: 20px;
+}
+#total_button:hover{
+    color: rgb(255, 0, 0);
+}
+#address{
+    font-size: 15px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: black;
+}
+.heading{
+    font-family:cursive;
+}
+.footer{
+    text-decoration: none;
+    color: red;
+    font-size: 15px;
+}
+.rs{
+    font-weight: 100;
+    font-size: 15px;
+}
