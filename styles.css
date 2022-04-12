@@ -1,0 +1,98 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@200&display=swap');
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+li,a,button{
+    font-family: "Monsterrat",sans-serif;
+    font-weight: 500;
+    font-size: 16px;
+    color: whitesmoke;
+    text-decoration: none;
+}
+header{
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding: 2px 10%;
+}
+.logo{
+    cursor: pointer;
+    margin-right: auto;
+    text-decoration: dotted;
+}
+.navlinks{
+    list-style: none;
+}
+.navlinks li{
+    display: inline-block;
+    padding: 0px 20px;
+}
+.navlinks li a{
+    transition: all 1s ease 0s;
+}
+.navlinks li a:hover{
+    color: rgb(202, 30, 30);
+}
+button{
+    padding: 9px 25px;
+    background-color: rgba(0,136,169,1);
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 8.3s ease 0s;
+}
+button:hover{
+    background-color: rgba(0,136,169,0.8);
+
+}
+.navbar{
+    background-color: rgb(46, 43, 43);
+    position: fixed;
+    width: 100%;
+    z-index: 999;
+    padding: 1px 0;
+    
+}
+body{
+    background: url("images/1.jpg") no-repeat center;
+    background-position:bottom;
+    background-size:cover;
+    background-repeat: repeat-y;
+    display: flex;
+    background-attachment: fixed;
+    min-height: 500px;
+}
+.defn{
+    color: red;
+}
+.home{
+    display: flex;
+    height: 100vh;
+    color: rgb(255, 255, 255); /* Fixed text*/
+    min-height: 500px;
+    background-size: cover;
+    background-attachment: fixed;
+    margin-top: 250px;
+    margin-left: 95px;
+}
+.home .home-content .text-1{
+    font-size: 27px;
+}
+.home .home-content .text-2{
+    font-size: 75px;
+    margin-left: -3px;
+}
+.home .home-content .text-3{
+    font-size: 40px;
+    margin: 5px 0;
+}
+
+.name{
+    color: rgb(255, 29, 29);
+    font-family:'Courier New', Courier, monospace;
+}
+.a{
+    font-size: 60px;
+}

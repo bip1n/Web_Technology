@@ -1,0 +1,92 @@
+<html>
+  <head>
+    <title>Receipt</title>
+
+    <link href="style1.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="div"> 
+  <form action="action.php" method="post">
+      <table border="1" cellspacing="0" cellpadding="5px" align="center">
+          <tr>
+              <th class="heading">Date: <input type="date"/></th>
+              <th class="receipt_title" colspan="3"><span>Experts Computers Solution</span> <br><span id="address"> Balkumari, Lalitpur</span></th>
+          </tr>
+          <tr>
+              <td colspan="2" class="buyers_name"> To: <input type="text" name="buyer" placeholder="Buyers Name"></td>
+              <td colspan="2" > Shipping address: <input type="text" name="address" minlength="5"></td>
+          </tr>
+          <tr>
+              <th class="heading">Product Code</th>
+              <th class="heading">Quantity</th>
+              <th class="heading">Rate</th>
+              <th class="heading">Total<span class="rs"> (in Rs.)</span></th>
+          </tr>
+          <tr>
+              <td>
+                  <select id="code" name="code">
+                  <option >-Select Product Code-</option>
+                  <option value ="2234">111</option>
+                  <option value ="5569">222</option>
+                  <option value ="8765">333</option>
+                  </select>
+              </td>
+          <td><input type="number" id="qty1" ></td>
+          <td><input type="number" id="price1"></td>
+          <td><span id="result1"></span></td>
+          </tr>
+          <tr>
+              <td>
+                  <select id="code" name="code">
+                  <option value="">-Select Product Code-</option>
+                  <option value ="5478">444</option>
+                  <option value ="3321">555</option>
+                  <option value ="1564">666</option>
+                  </select>
+              </td>
+              <td><input type="number" id="qty2"></td>
+              <td><input type="number" id="price2"></td>
+              <td><span id="result2"></span></td>
+          </tr>
+          <tr>
+              <td colspan="3" align="right">SubTotal</td>
+              <td><span id="subtotal"></span></td>
+          </tr>
+          <tr>
+              <td colspan="3" align="right">Tax</td>
+              <td> <input id="tax" type="number" placeholder="In Percentage"></td>
+          </tr>
+          <tr>
+              <td colspan="3" align="center"><input id="total_button" type="button" value="Total" onclick="calculate()"></td>
+              <td><span id="total"></span></td>
+          </tr>
+      </table>
+  </form>
+</div>
+    <script>
+      function calculate(){
+        var qty1=document.getElementById("qty1").value;
+        var price1=document.getElementById("price1").value;
+        var qty2=document.getElementById("qty2").value;
+        var price2=document.getElementById("price2").value;
+        var tax=document.getElementById("tax").value;
+        var total=0;
+        var result1=0;
+        var result2=0;
+        result1= parseInt(qty1) * parseInt(price1);
+        result2= parseInt(qty2)* parseInt(price2);
+        var subtotal=0;
+        subtotal =  result1 + result2;
+        total = ((parseInt(tax) / 100)*subtotal) + subtotal;
+        document.getElementById("result1").innerHTML = result1;
+        document.getElementById("result2").innerHTML = result2;
+        document.getElementById("subtotal").innerHTML = subtotal;
+        document.getElementById("total").innerHTML = total;
+
+      }
+    </script>
+    <footer align="center">
+       <a href="www.github.com/bip1n"  class="footer">&copy; Bhabishwar Khanal</a>
+    </footer>
+  </body>
+</html>
