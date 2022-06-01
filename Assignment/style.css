@@ -1,0 +1,59 @@
+body{
+    background-color: #b30f0f;
+}
+h2 {
+  color: red;
+}
+div {
+background-color:white;
+width: 300px;
+padding: 50px;
+margin: 140px 600px;
+}
+u
+{ font-family: "Lucida Console", "Cascadia Code", monospace;
+text-decoration: underline;
+text-decoration-color: rgb(194, 22, 22);
+}
+.input_button{background-color: #f31111;
+background-image: linear-gradient(to right, rgb(133, 9, 9) , rgb(250, 4, 4));
+color: white;
+height: 30pt;
+width: 100%;
+margin: 0%;
+padding: 0%;
+text-align: center;
+font-size: 16px;
+width: 80%;
+
+
+}
+p{
+text-align: center;
+}
+
+.a_two{
+    text-decoration: none;
+    background-color: rgb(135, 205, 233);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right:30px;
+    color: white;
+    margin: 10px 35px;
+    width: 80%;
+}
+  .a_one{
+    text-decoration: none;
+    background-color: blue;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    padding-right:30px;
+    color: white;
+    margin: 15px 35px;
+    width: 80%;
+}  
+.input_field{
+    border: none; 
+    border-bottom: 2px solid red;
+    width: 80%;
+}
