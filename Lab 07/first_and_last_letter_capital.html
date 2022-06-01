@@ -1,0 +1,13 @@
+<html>
+    <head>
+        <title>Changing into uppercase</title>
+    </head>
+    <body>
+        <h1>Desired output: </h1>
+        <p id="capital-string" style="font-size: larger;"></p>
+        <script>
+        var string=prompt("Enter the string");
+        var result=string.charAt(0).toUpperCase() + string.slice(1,string.length-1)+string.charAt(string.length-1).toUpperCase();
+        document.getElementById("capital-string").innerText = result;
+    </script>
+    </body>
