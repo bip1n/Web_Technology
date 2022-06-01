@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Sign Up Form Validation</title>
+        <style>
+            form{
+                align-items: center;
+            }
+        </style>
+    </head>
+    <body>
+        <form method="get" action="haha.php">
+            <div>
+                <label for="name">Name: </label>
+                <input type="text" name="name" id="name" placeholder="Enter your name">
+            </div>
+            <div>
+                <label for="email">E-mail: </label>
+                <input type="email" name="email" id="email" placeholder="Enter your e-mail address">
+            </div>
+            <div>
+                <label for="password">Password: </label>
+                <input type="password" name="password" id="password" placeholder="Enter password">
+            </div>
+            <div>
+                <label for="repassword">Re-password: </label>
+                <input type="password" name="repassword" id="repassword" placeholder="Re-enter password">
+            </div>
+           <div>
+                <label for="number">Contact number: </label>
+                <input type="number" name="number" id="number" placeholder="Enter contact number">
+           </div>
+           <div>
+                <input type="submit" value="Submit" id="submit">
+                <input type="reset" name="Reset" id="reset">
+           </div>
+        </form>
+        <script>
+            document.getElementById("name").onblur= validateName;
+           function validateName() {
+                 var name = document.getElementById("name").value;
+                 if (name == "") {
+                     alert("This field can't be empty");
+                     return false;
+                }
+                 else {
+                     if(name.length>=3 && name.length<=10) {
+                     var pos = name.search(/^[a-zA-Z0-9]{3,10}$/);
+                    if (pos == -1) {
+                    alert("Invalid Name!");
+                     return false;
+                   } 
+                   else {
+                     console.log("Valid Name.");
+                    return true;
+                   }
+                }
+                   else{
+                       alert("Name should contain 3-10 characters.")
+                       return false;
+                   }
+                
+        }
+      }
+
+     document.getElementById("email").onchange = validatemail;
+    function validatemail() {
+         var email= document.getElementById("email").value;
+            if (email== "") {
+                alert("Email cannot be empty");
+                return false;
+            }
+             else {
+               var pos = email.search(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/);
+              if (pos == -1) {
+                alert("Invalid E-mail!");
+                return false;
+            } 
+             else {
+              console.log("Valid email!");
+              return true;
+            } 
+        }
+    }
+    document.getElementById("password").onblur= validatepassword;
+        function validatepassword() {
+         var password= document.getElementById("password").value;
+            if (password== "") {
+              alert("Password section can't be empty!");
+              return false;
+            }
+             else {
+                 if(password.length>=8 && password.length<=15) { 
+                   var pos = password.search(/^[a-zA-Z0-9]{8,15}$/);
+                   if (pos == -1) {
+                     alert("Invalid Password!");
+                     return false;
+                    } 
+                   else {
+                    console.log("Valid Password!");
+                    return true;
+                    }
+                }  
+                 else{
+                    alert("Your password must contaion 8 to 15 characters.");
+                    return false;
+                } 
+            }1
+        }
+    document.getElementById("repassword").onblur= validaterepassword;
+    function validaterepassword() {
+        var password= document.getElementById("password").value;
+         var repasssword= document.getElementById("repassword").value;
+         console.log(password, repasssword);
+         if(password==""){
+             alert("Re-password section can't be empty!");
+            }
+        else{
+            var result = repasssword.localeCompare(password);
+               if(result==0){
+                   console.log("Password matched.");
+                   return true;
+               }
+           else
+            {
+                alert("Enter same password!");
+                return false;
+            }
+        }
+    } 
+    document.getElementById("number").onblur= validatenumber;
+    function validatenumber(){  
+        var number= document.getElementById("number").value; 
+        if(number==""){
+            alert("You must enter number.");
+        }
+        else{
+           if(number.length==10){
+              var position=number.search(/^(98\d{8})$/);
+              if(position==0){
+                  console.log("Your number is valid");
+                }
+              else{
+                    alret("Enter valid phone number.");
+                    return true;
+                }
+            }
+            else{
+              alert("Phone number must be of 10 digits.");
+              return false;
+           }   
+       }
+    }
+    </script>
+</body>
+</html>
